@@ -1,0 +1,11 @@
+#form {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 75px;
+}
+
+div#full {
+    background: black;
+    height: 100vh;
+    color: aliceblue;
+}

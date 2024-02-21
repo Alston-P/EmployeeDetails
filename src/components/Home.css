@@ -1,0 +1,13 @@
+h1#hd {
+    text-align: center;
+    color: azure;
+}
+
+#bt {
+    margin-left: 120px;
+}
+
+div#bod {
+    background-color: black;
+    height: 100vh;
+}
