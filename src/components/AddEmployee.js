@@ -23,14 +23,14 @@ function AddEmployee() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    axios.post("http://localhost:5010/addemployee",empData)
+    axios.post("http://localhost:5010/addemployee",).then((response) => { console.log(response) })
     console.log(empData);
-    setEmpData({
-      ename: '',
-      id: '',
-      designation: '',
-      salary: ''
-    })
+    // setEmpData({
+    //   ename: '',
+    //   id: '',
+    //   designation: '',
+    //   salary: ''
+    // })
   }
 
   const navigate = useNavigate()
