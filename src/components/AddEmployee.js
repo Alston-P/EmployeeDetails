@@ -22,15 +22,20 @@ function AddEmployee() {
   }
   const handleSubmit = (e) => {
     e.preventDefault()
-
-    axios.post("http://localhost:5010/addemployee",).then((response) => { console.log(response) })
-    console.log(empData);
-    // setEmpData({
-    //   ename: '',
-    //   id: '',
-    //   designation: '',
-    //   salary: ''
-    // })
+    if (empData.ename, empData.id, empData.designation, empData.salary) {
+      axios.post("http://localhost:4000/addemployee", empData).then((response) => { alert("Data is saved") })
+        .catch((err) => { console.log(err); })
+      // console.log(empData);
+      setEmpData({
+        ename: '',
+        id: '',
+        designation: '',
+        salary: ''
+      })
+    }
+    else {
+      alert("Fill all fields")
+    }
   }
 
   const navigate = useNavigate()

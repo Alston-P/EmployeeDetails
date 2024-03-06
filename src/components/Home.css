@@ -1,6 +1,6 @@
 h1#hd {
     text-align: center;
-    color: azure;
+    color: white;
 }
 
 #bt {
@@ -10,4 +10,10 @@ h1#hd {
 div#bod {
     background-color: black;
     height: 100vh;
+    color: white;
+}
+table#field {
+    width: 700px;
+    margin-left: 120px;
+    margin-top: 70px;
 }
