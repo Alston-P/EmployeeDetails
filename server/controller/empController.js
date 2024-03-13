@@ -77,12 +77,30 @@ const fetchEmployee = (req, res) => {
     })
 }
 
-const updateEmployee = (req,res)=> {
-  ename=req.body.ename,
-  id=req.body.id,
-  designation=req.body.designation,
-  salary=req.body.salary
-  console.log(ename);
+const updateEmployee =  (req,res)=> {
+
+  const empid= req.params.empid
+  console.log(empid,"l");
+
+  const {ename,id,designation,salary}= req.body
+  console.log(ename,id,designation,salary,"o")
+
+  empSchema.findByIdAndUpdate(empid,{ename,id,designation,salary},{new:true})
+  .then(data=>{
+    res.json({
+      status: 200,
+      msg:"data is updated",
+      data:data
+    })
+  })
+  .catch(err=>{
+    res.json({
+      status:500,
+      msg:"data not updated"
+    })
+  })
+
+
 }
 
 module.exports = { addAEmployee, showEmployee, deleteEmployee, fetchEmployee, updateEmployee }
